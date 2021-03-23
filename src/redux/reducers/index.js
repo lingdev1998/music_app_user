@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import AppReducer from "./AppReducer";
 
 const initState = {};
 const reducer = (state = initState, action) => {
@@ -7,5 +8,5 @@ const reducer = (state = initState, action) => {
       return { ...state };
   }
 };
-const reducers = combineReducers({reducer});
+const reducers = combineReducers({ reducer, AppReducer: AppReducer });
 export default reducers;

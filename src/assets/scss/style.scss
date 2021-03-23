@@ -226,8 +226,8 @@ select.form-control:not([size]):not([multiple]) {
 // }
 
 .ms_loader {
-    position: fixed;
-    top: 0;
+    // position: fixed;
+    // top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1884,7 +1884,7 @@ span.ovrly_text2 {
 .ms_footer_wrapper {
     background-image: url(../images/footer_bg.png);
     background-size: cover;
-    position: relative;
+    bottom: 0;
     z-index: 1;
     margin-bottom: 75px;
     padding-top: 50px;
@@ -1935,7 +1935,7 @@ h1.footer_title {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 18px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 h1.footer_title:after {

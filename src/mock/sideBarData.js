@@ -57,28 +57,28 @@
     className: "nav_downloads",
     routes: [
       {
-        path: "/",
+        path: "/downloads",
         exact: false,
         navText: "downloads",
         title: "Downloads",
         icon: "icon icon_download",
       },
       {
-        path: "/",
+        path: "/purchased",
         exact: false,
         navText: "purchased",
         title: "Purchased",
         icon: "icon icon_purchased",
       },
       {
-        path: "/",
+        path: "/favourites",
         exact: false,
         navText: "favourites",
         title: "Favourites",
         icon: "icon icon_favourite",
       },
       {
-        path: "/",
+        path: "/history",
         exact: false,
         navText: "history",
         title: "History",
@@ -90,14 +90,14 @@
     className: "nav_playlist",
     routes: [
       {
-        path: "/",
+        path: "/featured",
         exact: false,
         navText: "featured Playlist",
         title: "Featured Playlist",
         icon: "icon icon_fe_playlist",
       },
       {
-        path: "/",
+        path: "/create",
         exact: false,
         navText: "create Playlist",
         title: "Create Playlist",

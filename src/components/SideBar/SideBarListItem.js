@@ -1,13 +1,16 @@
-import React  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { matchPath, withRouter } from "react-router";
+
 import Translation from "../../utils/int8-util";
 
 const SideBarListItem = (props) => {
+
   return (
     <li>
       <Link
         to={props.path}
-        className={props.isActive ? "active" : ""}
+        className={matchPath(props.location.pathname, props.path) ? "active" : ""}
         title={props.title}
       >
         <span className="nav_icon">
@@ -18,4 +21,4 @@ const SideBarListItem = (props) => {
     </li>
   );
 };
-export default SideBarListItem;
+export default withRouter(SideBarListItem);
