@@ -3,12 +3,13 @@ import React, { lazy } from "react";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import AudiotrackOutlinedIcon from "@material-ui/icons/AudiotrackOutlined";
 // import Discover from './views/Discover';
-const Discover = lazy(() => import("./views/Discover"));
+const Discover = lazy(() => import("./views/Discover")); 
+const Albums = lazy(() => import("./views/Album"));
 const Tracks = React.lazy(() => import("./views/Tracks/index"));
 
 const routes = [
   { path: "/discover", name: "Discover", component: Discover, icon: HomeOutlinedIcon },
-  { path: "/albums", name: "Albums", component: Discover, icon: HomeOutlinedIcon },
+  { path: "/albums", name: "Albums", component: Albums, icon: HomeOutlinedIcon },
   { path: "/artists", name: "Artists", component: Discover, icon: HomeOutlinedIcon },
   { path: "/genres", name: "Genres", component: Discover, icon: HomeOutlinedIcon },
   { path: "/top-tracks", name: "Top Tracks", component: Discover, icon: HomeOutlinedIcon },

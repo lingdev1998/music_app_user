@@ -6,7 +6,7 @@ import TopGenres from '../../components/TopGenres';
 
 import QuangCao from "../../components/QuangCao";
 
-const Discover = (props) => {
+const Album = (props) => {
   return (
     <>
       <Banner />
@@ -20,4 +20,4 @@ const Discover = (props) => {
   );
 };
 
-export default Discover;
+export default Album;
