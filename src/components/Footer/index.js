@@ -11,11 +11,11 @@ import AddressIcon from "../../assets/images/svg/add.svg";
 const Footer = (props) => {
   return (
     <div className="ms_footer_wrapper">
-      <div className="ms_footer_logo">
+      {/* <div className="ms_footer_logo">
         <Link to="/">
           <img alt="footer-img" src={LogoIcon} />
         </Link>
-      </div>
+      </div> */}
       <div className="ms_footer_inner">
         <div className="row">
           <div className="col-lg-3 col-md-6">
