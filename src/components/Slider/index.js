@@ -5,7 +5,7 @@ const Slider = (props) => {
   return (
     <div className="ms_rcnt_slider">
       <div className="ms_heading">
-        <h1>Recently Played</h1>
+        <h1>{props.headingContent}</h1>
         <span className="veiw_all">
           <a 
             href="/"
