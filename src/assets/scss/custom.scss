@@ -1,0 +1,37 @@
+ .show {
+     opacity: 1 !important;
+     font-size: 13px !important;
+ }
+
+ .dropdown-menu.show {
+     display: block !important;
+     position: absolute;
+     inset: 0px auto auto 0px;
+ }
+
+ .player_left {
+     -webkit-tap-highlight-color: transparent;
+     width: auto;
+     position: absolute;
+     border-radius: 0px 12px 12px 0px;
+     background-image: -webkit-linear-gradient(180deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(32, 167, 196) 100%);
+     box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+     float: left;
+     z-index: 10;
+
+     .ms_play_song {
+         box-sizing: border-box;
+         display: inline-block;
+         float: left;
+         height: 75px;
+         width: 281px;
+         padding: 15px 0px 15px 25px;
+
+         .play_song_name { 
+             line-height: 24px;
+             color: #777777;
+             font-size: 15px;
+             box-sizing: border-box;
+         }
+     }
+ }

@@ -1,0 +1,94 @@
+{
+  "homepage": "http://IamLing98.github.io/music_app_user",
+  "name": "music_app_user",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.49",
+    "@material-ui/utils": "^4.11.2",
+    "@mdi/font": "^3.8.95",
+    "@mdi/react": "^1.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.12.3",
+    "bootstrap": "^4.6.0",
+    "chart.js": "^2.8.0",
+    "chartjs-plugin-datalabels": "^0.6.0",
+    "del": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "i18next": "^19.9.0",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "jquery": "^3.4.1",
+    "jquery-file-upload": "^4.0.11",
+    "justgage": "1.2.2",
+    "jvectormap": "2.0.4",
+    "node-sass": "^5.0.0",
+    "perfect-scrollbar": "^1.4.0",
+    "popper.js": "^1.15.0",
+    "progressbar.js": "1.0.1",
+    "raphael": "^2.2.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.8",
+    "react-redux": "7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-cache-route": "^1.11.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.0",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.0.5",
+    "select2": "^4.0.7",
+    "select2-bootstrap-theme": "0.1.0-beta.10",
+    "slick-carousel": "^1.8.1",
+    "typeahead.js": "^0.11.1",
+    "typescript": "^4.2.3",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "compass-mixins": "^0.12.10",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.2",
+    "gulp-inject-partials": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^2.0.0",
+    "minimatch": "^3.0.4",
+    "node-sass": "^4.12.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
