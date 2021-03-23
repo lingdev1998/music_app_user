@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/Tracks/index.js"],"names":["Tracks","props"],"mappings":"kHAAA,uBASeA,UANA,SAAAC,GACX,OACI","file":"static/js/6.cc8c61f3.chunk.js","sourcesContent":["import React from 'react';\n\n\nconst Tracks = props =>{\n    return(\n        <div>For tracks</div>\n    )\n}\n\nexport default Tracks;"],"sourceRoot":""}
