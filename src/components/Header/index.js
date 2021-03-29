@@ -3,10 +3,10 @@ import { Menu, Dropdown } from "antd";
 import { Link } from "react-router-dom";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-import Translation from "../../../utils/int8-util";
+import Translation from "../../utils/int8-util";
 
-import SearchIcon from "../../../assets/images/svg/search.svg";
-import LanguageIcon from "../../../assets/images/svg/lang.svg";
+import SearchIcon from "../../assets/images/svg/search.svg";
+import LanguageIcon from "../../assets/images/svg/lang.svg";
 
 const Header = (props) => {
   const [currentLanguage, setCurrentLanguage] = useState({

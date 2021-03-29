@@ -1,21 +1,43 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import WeeklyArtist from "../../assets/images/weekly/song1.jpg";
 
 const PlayerLeft = (props) => {
+  const [showOption, setShowOption] = useState(false);
+
   return (
-    <div className="player_left">
+    <div className={showOption ? "player_left open_list" : "player_left"}>
       <div className="ms_play_song">
         <div className="play_song_name">
           <Link to="/" id="playlist-text">
             <div className="jp-now-playing flex-item">
               <div className="jp-track-name">
                 <span className="que_img">
-                  <img alt="temp" src={WeeklyArtist} />
+                  <img
+                    style={{ width: "50px", height: "50px" }}
+                    alt="temp"
+                    src={
+                      props.jPlaylistsReducer.AudioPlaylist.playlist[
+                        props.jPlaylistsReducer.AudioPlaylist.current
+                      ].poster
+                    }
+                  />
                 </span>
                 <div className="que_data">
-                  Cro Magnon Man <div className="jp-artist-name">Mushroom Records</div>
+                  {
+                    props.jPlaylistsReducer.AudioPlaylist.playlist[
+                      props.jPlaylistsReducer.AudioPlaylist.current
+                    ].title
+                  }
+                  <div className="jp-artist-name">
+                    {
+                      props.jPlaylistsReducer.AudioPlaylist.playlist[
+                        props.jPlaylistsReducer.AudioPlaylist.current
+                      ].artist
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -41,7 +63,7 @@ const PlayerLeft = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/"  >
+            <Link to="/">
               <span className="song_optn_icon">
                 <i className="ms_icon icon_playlist" />
               </span>
@@ -49,7 +71,7 @@ const PlayerLeft = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/"  >
+            <Link to="/">
               <span className="song_optn_icon">
                 <i className="ms_icon icon_share" />
               </span>
@@ -58,11 +80,18 @@ const PlayerLeft = (props) => {
           </li>
         </ul>
       </div>
-      <span className="play-left-arrow">
+      <span
+        className="play-left-arrow"
+        onClick={() => setShowOption((value) => (value = !value))}
+      >
         <i className="fa fa-angle-right" aria-hidden="true" />
       </span>
     </div>
   );
 };
 
-export default PlayerLeft;
+const mapStateToProps = (state) => {
+  return { jPlaylistsReducer: state.jPlaylists };
+};
+
+export default connect(mapStateToProps)(PlayerLeft);

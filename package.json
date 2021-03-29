@@ -45,6 +45,7 @@
     "react-slick": "^0.28.0",
     "reactstrap": "^8.9.0",
     "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
     "select2": "^4.0.7",
     "select2-bootstrap-theme": "0.1.0-beta.10",
     "slick-carousel": "^1.8.1",

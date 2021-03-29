@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import AppReducer from "./AppReducer";
+import AppReducer from "./AppReducer"; 
 
 import { reducer as jPlayers } from "react-jplayer";
 import { reducer as jPlaylists } from "react-jplaylist";

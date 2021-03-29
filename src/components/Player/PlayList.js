@@ -30,7 +30,11 @@ import JPlaylist, {
   Title as PlaylistTitle,
 } from "react-jplaylist";
 
-import $ from 'jquery';
+import $ from "jquery";
+
+import { connect } from "react-redux";
+
+import Volume from "./Volume";
 
 import VolumeIcon from "../../assets/images/svg/volume.svg";
 
@@ -44,32 +48,38 @@ const jPlaylistOptions = {
   playlist: [
     {
       id: 0,
-      title: "Bubble",
-      artist: "Miaow",
+      title: "Nhớ Người Hay Nhớ",
+      artist: "Sofia x Khói x Châu Đăng Khoa ( MẠNH LTK REMIX )",
       sources: {
-        m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-        oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg",
+        mp3:
+          "https://res.cloudinary.com/linkdoan/video/upload/v1617042245/yt1s.com_-_NH%E1%BB%9A_NG%C6%AF%E1%BB%9CI_HAY_NH%E1%BB%9A_SOFIA_X_KH%C3%93I_X_CH%C3%82U_%C4%90%C4%82NG_KHOA_M%E1%BA%A0NH_LTK_REMIX_5_ul0uu4.mp3",
       },
       free: true,
+      poster:
+        "https://res.cloudinary.com/linkdoan/image/upload/v1617042862/nnhn_xgufda.png",
     },
     {
       id: 1,
-      title: "Tempered Song",
-      artist: "Miaow",
+      title: "Có Duyên Không Nợ (Lofi Ver)",
+      artist: "NB3 Hoài Bảo x Freak D",
       sources: {
-        mp3: "http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
-        oga: "http://www.jplayer.org/audio/ogg/Miaow-01-Tempered-song.ogg",
+        mp3:
+          "https://res.cloudinary.com/linkdoan/video/upload/v1617043723/yt1s.com_-_C%C3%B3_Duy%C3%AAn_Kh%C3%B4ng_N%E1%BB%A3_Lofi_Ver_NB3_Ho%C3%A0i_B%E1%BA%A3o_x_Freak_D_vv1gpm.mp3",
       },
+      free: true,
+      poster:
+        "https://res.cloudinary.com/linkdoan/image/upload/v1617043713/coduyenkhongno_ygt4f0.png",
     },
     {
       id: 2,
-      title: "Cro Magnon Man",
-      artist: "The Stark Palace",
+      title: "Chẳng Thể Tìm Được Em",
+      artist: "PhucXp ft. Freak D",
       sources: {
-        mp3: "http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
-        oga: "http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg",
+        mp3:
+          "https://res.cloudinary.com/linkdoan/video/upload/v1617043718/yt1s.com_-_Ch%E1%BA%B3ng_Th%E1%BB%83_T%C3%ACm_%C4%90%C6%B0%E1%BB%A3c_Em_PhucXp_ft_Freak_D_Audio_Official_m35lp7.mp3",
       },
-      poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png",
+      poster:
+        "https://res.cloudinary.com/linkdoan/image/upload/v1617043711/ctttdcm_boolsk.png",
     },
   ],
 };
@@ -77,11 +87,14 @@ const jPlaylistOptions = {
 initializeOptions(jPlayerOptions, jPlaylistOptions);
 
 const PlayList = (props) => {
+  console.log("props:", props.jPlayersReducer);
 
   useEffect(() => {
-    var myDomEl = $(".jp-play-bar").append( "<div class='bullet'></div>" );
+    var myDomEl = $(".jp-play-bar").append("<div class='bullet'></div>");
     console.log(myDomEl);
   }, []);
+
+  useEffect(() => {}, []);
 
   return (
     <div className="jp-type-playlist">
@@ -101,14 +114,6 @@ const PlayList = (props) => {
               </Next>
             </div>
             <div className="jp-progress-container flex-item">
-              {/* <div className="jp-time-holder">
-              <span className="jp-current-time" role="timer" aria-label="time">
-                00:00
-              </span>
-              <span className="jp-duration" role="timer" aria-label="duration">
-                04:27
-              </span>
-            </div> */}
               <div className="jp-time-holder">
                 <CurrentTime className="jp-current-time" />
                 <Duration className="jp-duration" />
@@ -122,31 +127,6 @@ const PlayList = (props) => {
                 </SeekBar>
               </div>
             </div>
-            <div className="jp-volume-controls flex-item">
-              <Mute>
-                <i className="fa">{/* Icon set in css */}</i>
-              </Mute>
-              <div className="jp-volume-slider">
-                <div className="jp-volume-bar-container">
-                  <VolumeBar />
-                </div>
-              </div>
-              {/* <div className="widget knob-container">
-                <div className="knob-wrapper-outer">
-                  <div className="knob-wrapper">
-                    <div className="knob-mask">
-                      <div className="knob d3" style={{ transform: "rotateZ(270deg)" }}>
-                        <span />
-                      </div>
-                      <div className="handle" style={{ transform: "rotateZ(270deg)" }} />
-                      <div className="round">
-                        <img alt="volume-img" src={VolumeIcon} />
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div> */}
-            </div>
             <div className="jp-toggles flex-item">
               <Shuffle className="jp-shuffle">
                 <i className="ms_play_control" />
@@ -155,6 +135,8 @@ const PlayList = (props) => {
                 <i className="ms_play_control" />
               </Repeat>
             </div>
+            <Volume />
+
             <div className="jp_quality_optn custom_select">
               <select style={{ display: "none" }}>
                 <option>quality</option>
@@ -191,4 +173,8 @@ const PlayList = (props) => {
   );
 };
 
-export default PlayList;
+const mapStateToProps = (state) => {
+  return { jPlayersReducer: state.jPlayers };
+};
+
+export default connect(mapStateToProps)(PlayList);
