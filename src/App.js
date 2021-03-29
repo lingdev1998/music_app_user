@@ -20,9 +20,13 @@ const loading = () => (
 
 const history = createHistory();
 
+const store = configureStore();
+
+console.log(store)
+
 function App() {
   return (
-    <Provider store={configureStore()}>
+    <Provider store={store}>
       <Router history={history}>
         <React.Suspense fallback={loading()}>
           <Switch>
