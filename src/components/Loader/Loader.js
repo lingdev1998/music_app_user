@@ -8,8 +8,8 @@ const Loader = ({ isLoading, error }) => {
     return (
       <div>
         <div style={{ height: "90vh" }} className="container">
-          <div class="ms_loader">
-            <div class="wrap">
+          <div className="ms_loader">
+            <div className="wrap">
               <img src={LoaderImg} alt="" />
             </div>
           </div>
