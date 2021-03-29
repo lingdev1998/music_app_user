@@ -30,7 +30,9 @@ import JPlaylist, {
   Title as PlaylistTitle,
 } from "react-jplaylist";
 
-import $ from 'jquery';
+import $ from "jquery";
+
+import { connect } from "react-redux";
 
 import VolumeIcon from "../../assets/images/svg/volume.svg";
 
@@ -77,9 +79,10 @@ const jPlaylistOptions = {
 initializeOptions(jPlayerOptions, jPlaylistOptions);
 
 const PlayList = (props) => {
+  console.log("props:", props.jPlayersReducer);
 
   useEffect(() => {
-    var myDomEl = $(".jp-play-bar").append( "<div class='bullet'></div>" );
+    var myDomEl = $(".jp-play-bar").append("<div class='bullet'></div>");
     console.log(myDomEl);
   }, []);
 
@@ -94,21 +97,13 @@ const PlayList = (props) => {
                 <i className="ms_play_control" />
               </Previous>
               <Play className="jp-play">
-                <i className="ms_play_control" />
+              <i className="ms_play_control" />
               </Play>
               <Next className="jp-next">
                 <i className="ms_play_control" />
               </Next>
             </div>
             <div className="jp-progress-container flex-item">
-              {/* <div className="jp-time-holder">
-              <span className="jp-current-time" role="timer" aria-label="time">
-                00:00
-              </span>
-              <span className="jp-duration" role="timer" aria-label="duration">
-                04:27
-              </span>
-            </div> */}
               <div className="jp-time-holder">
                 <CurrentTime className="jp-current-time" />
                 <Duration className="jp-duration" />
@@ -191,4 +186,8 @@ const PlayList = (props) => {
   );
 };
 
-export default PlayList;
+const mapStateToProps = (state) => {
+  return { jPlayersReducer: state.jPlayers };
+};
+
+export default connect(mapStateToProps)(PlayList);
