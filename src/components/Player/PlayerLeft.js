@@ -26,11 +26,11 @@ const PlayerLeft = (props) => {
                   />
                 </span>
                 <div className="que_data">
-                  {
+                 <div className="jp-song-name"> {
                     props.jPlaylistsReducer.AudioPlaylist.playlist[
                       props.jPlaylistsReducer.AudioPlaylist.current
                     ].title
-                  }
+                  }</div> 
                   <div className="jp-artist-name">
                     {
                       props.jPlaylistsReducer.AudioPlaylist.playlist[
