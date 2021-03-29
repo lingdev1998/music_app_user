@@ -127,6 +127,7 @@ const PlayList = (props) => {
                 </SeekBar>
               </div>
             </div>
+            <Volume />
             <div className="jp-toggles flex-item">
               <Shuffle className="jp-shuffle">
                 <i className="ms_play_control" />
@@ -134,8 +135,7 @@ const PlayList = (props) => {
               <Repeat className="jp-repeat">
                 <i className="ms_play_control" />
               </Repeat>
-            </div>
-            <Volume />
+            </div> 
 
             <div className="jp_quality_optn custom_select">
               <select style={{ display: "none" }}>

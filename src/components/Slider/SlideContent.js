@@ -10,7 +10,7 @@ const SlideContent = (props) => {
     <div className="swiper-slide" style={{ marginRight: 30 }}>
       <div className="ms_rcnt_box">
         <div className="ms_rcnt_box_img">
-          <img alt="slide-img" src={MusicRIcon} />
+          <img alt="slide-img" src="https://res.cloudinary.com/linkdoan/image/upload/v1617049237/Ngoc-Trinh-1-1767-1606887702_osyl0a.jpg" />
           <div className="ms_main_overlay">
             <div className="ms_box_overlay" />
             <div className="ms_more_icon">
