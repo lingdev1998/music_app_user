@@ -1,4 +1,5 @@
 import React from "react";
+
 import SideBar from "../components/SideBar";
 import PageWrapper from "../components/PageWrapper";
 import Footer from "../components/Footer";
@@ -9,11 +10,11 @@ const LayoutHome = (props) => {
   return (
     <div className="ms_main_wrapper">
       <SideBar />
-      <Header/>
+      <Header />
       <PageWrapper />
       <Footer />
       <Player />
     </div>
   );
-};
+}; 
 export default LayoutHome;

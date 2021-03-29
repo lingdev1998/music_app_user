@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+
 import PlayerLeft from "./PlayerLeft";
 import PlayerRight from "./PlayerRight";
-import PlayList from "./PlayList";  
+import PlayList from "./PlayList";
+
 
 const PlayerWrapper = (props) => {
+  const [isShowPlayer, setIsShowPlayer] = useState(true);
+
   return (
-    <div className="ms_player_wrapper">
-      <div className="ms_player_close">
-        <i className="fa fa-angle-up" aria-hidden="true" />
+    <div
+      className={isShowPlayer ? "ms_player_wrapper" : "ms_player_wrapper close_player"}
+    >
+      <div
+        className="ms_player_close"
+        onClick={() => setIsShowPlayer((value) => (value = !value))}
+      >
+        <i className="fa fa-angle-down" aria-hidden="true" />
       </div>
       <div className="player_mid">
         <div className="audio-player">
-          <div
+          {/* <div
             id="jquery_jplayer_1"
             className="jp-jplayer"
             style={{ width: 0, height: 0 }}
@@ -27,7 +36,7 @@ const PlayerWrapper = (props) => {
               src="http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
               title="Cro Magnon Man"
             />
-          </div>
+          </div> */}
           <div
             id="jp_container_1"
             className="jp-audio"
@@ -39,12 +48,13 @@ const PlayerWrapper = (props) => {
             {/*--Right Queue--*/}
             <PlayerRight />
             {/*--PalyList Queue--*/}
-            <PlayList/>
+            <PlayList />
           </div>
         </div>
       </div>
       {/*main div*/}
     </div>
   );
-};
+}; 
+
 export default PlayerWrapper;

@@ -2217,7 +2217,7 @@ h1.footer_title:after {
 .play_song_name .que_data {
     width: calc(100% - 50px);
     padding-left: 15px;
-    float: left; 
+    float: left;
 }
 
 .play_song_name h3 {
@@ -2466,8 +2466,12 @@ i.ms_icon.icon_share {
     margin-left: 40px;
 }
 
+.jp-playlist_display_none {
+    display: none;
+}
+
 .jp-playlist {
-    display: none
+    display: block;
 }
 
 .jp-toggles.flex-item button {
@@ -2866,8 +2870,8 @@ i.ms_icon.icon_share {
 
 .jp_queue_btn {
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 div#playlist-wrap span#myPlaylistQueue {
@@ -3029,6 +3033,11 @@ button.jp-repeat .ms_play_control:hover {
 
 button.jp-shuffle .ms_play_control:hover {
     background-position: 100px 0px !important;
+    background-color: #fff !important;
+}
+
+button.jp-shuffle .ms_play_control_selected {
+    background-position: 100px 0px !important; 
     background-color: #fff !important;
 }
 
