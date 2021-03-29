@@ -3,7 +3,7 @@ import logger from 'redux-logger'
 import reducers from "./reducers"; 
 
 export function configureStore(initialState) {
-  const middlewares = [logger];
+  const middlewares = [ ];
 
   const store = createStore(reducers, initialState, applyMiddleware(...middlewares));
 

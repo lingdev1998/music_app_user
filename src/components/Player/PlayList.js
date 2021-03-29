@@ -49,7 +49,7 @@ const jPlaylistOptions = {
     {
       id: 0,
       title: "Nhớ Người Hay Nhớ",
-      artist: "Sofia x Khói x Châu Đăng Khoa ( MẠNH LTK REMIX )",
+      artist: "Sofia x Khói x Châu Đăng Khoa(Remix)",
       sources: {
         mp3:
           "https://res.cloudinary.com/linkdoan/video/upload/v1617042245/yt1s.com_-_NH%E1%BB%9A_NG%C6%AF%E1%BB%9CI_HAY_NH%E1%BB%9A_SOFIA_X_KH%C3%93I_X_CH%C3%82U_%C4%90%C4%82NG_KHOA_M%E1%BA%A0NH_LTK_REMIX_5_ul0uu4.mp3",
@@ -130,7 +130,7 @@ const PlayList = (props) => {
             <Volume />
             <div className="jp-toggles flex-item">
               <Shuffle className="jp-shuffle">
-                <i className="ms_play_control" />
+                <i className="ms_play_control ms_play_control_selected" />
               </Shuffle>
               <Repeat className="jp-repeat">
                 <i className="ms_play_control" />
