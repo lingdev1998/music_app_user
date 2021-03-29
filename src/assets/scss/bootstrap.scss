@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -2999,10 +2999,10 @@ input[type="button"].btn-block {
 
 .dropdown-menu {
   position: absolute;
-  // top: 100%;
+  top: 100%;
   left: 0;
   z-index: 1000;
-  // display: none;
+  display: none;
   float: left;
   min-width: 10rem;
   padding: 0.5rem 0;
