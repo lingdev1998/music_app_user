@@ -5,8 +5,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import { configureStore } from "./redux/store";
 import { createHashHistory as createHistory } from "history";
 import Loader from "./components/Loader/Loader";
-import Layout from "./layouts/index";
-import Login from "./views/Auth/Login";
+import Layout from "./layouts/index"; 
 
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";

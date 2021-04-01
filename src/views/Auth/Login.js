@@ -1,17 +1,26 @@
 import React from "react";
 import Translation from "../../utils/int8-util";
-import "./style.scss";
+import { Row, Col } from "reactstrap";
 
 const Login = (props) => {
   return (
-    <div className="row">
-      <div className="col-md-6 mx-auto py-4 px-0">
+    <Row
+      className="row"
+      style={{
+        height: "100%",
+        width: "100%",
+        background: "linear-gradient(to right,#556270 0%, #ff6b6b 100%)",
+      }}
+    >
+      <Col
+        className="col-md-6 col-xs-12 col-sm-12 mx-auto py-4 px-0"
+        style={{ display: "flex" }}
+      >
         <div className="form-login-card">
           <div className="card-title text-center">
-            <h5 className="mt-5">HEY, THERE</h5>
-            <small className="para">
-              <Translation value="Logintoyourcoolaccountbelow.?" />
-            </small>
+            <h5 className="mt-5">
+              <Translation value="Login" />
+            </h5>
           </div>
           <form className="signup">
             <div className="form-group">
@@ -31,7 +40,7 @@ const Login = (props) => {
             <button type="button" className="btnLogin input-button">
               <Translation value="Login" />
             </button>
-            <div className="row">
+            <div className="row" style={{ marginTop: "15px" }}>
               <div className="col-6 col-sm-6">
                 <a href="#">
                   <p className="text-left pt-2 ml-1">
@@ -49,27 +58,22 @@ const Login = (props) => {
             </div>
             <span className="text-center">
               <Translation value="Or" />
-            </span>
-            <span className="text-center pt-3">
-              <Translation value="LoginUsing" />
-            </span>
-            <div className="row">
-              <div className="d-flex mx-auto pt-1 pb-3">
-                <a href="#">
-                  <i className="fab fa-facebook i" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-twitter i" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-linkedin i" />
-                </a>
-              </div>
+            </span> 
+            <div className="row" style={{marginRight:"0px", marginLeft:"0px"}}>
+              <a href="#" class="social-button" id="facebook-connect">
+                <span>Connect with Facebook</span>
+              </a>
+              <a href="#" class="social-button" id="google-connect">
+                <span>Connect with Google</span>
+              </a>
+              <a href="#" class="social-button" id="twitter-connect">
+                <span>Connect with Twitter</span>
+              </a> 
             </div>
           </form>
         </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 
