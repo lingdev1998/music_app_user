@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -6,6 +6,24 @@ import WeeklyArtist from "../../assets/images/weekly/song1.jpg";
 
 const PlayerLeft = (props) => {
   const [showOption, setShowOption] = useState(false);
+
+  const [songInfo, setSongInfo] = useState(
+    props.jPlaylistsReducer.AudioPlaylist.playlist[
+      props.jPlaylistsReducer.AudioPlaylist.current
+    ],
+  );
+
+  useEffect(() => {
+    setSongInfo(
+      props.jPlaylistsReducer.AudioPlaylist.playlist[
+        props.jPlaylistsReducer.AudioPlaylist.current
+      ],
+    );
+  }, [
+    props.jPlaylistsReducer.AudioPlaylist.playlist[
+      props.jPlaylistsReducer.AudioPlaylist.current
+    ],
+  ]);
 
   return (
     <div className={showOption ? "player_left open_list" : "player_left"}>
@@ -18,26 +36,12 @@ const PlayerLeft = (props) => {
                   <img
                     style={{ width: "50px", height: "50px" }}
                     alt="temp"
-                    src={
-                      props.jPlaylistsReducer.AudioPlaylist.playlist[
-                        props.jPlaylistsReducer.AudioPlaylist.current
-                      ].poster
-                    }
+                    src={songInfo ? songInfo.poster : ""}
                   />
                 </span>
                 <div className="que_data">
-                 <div className="jp-song-name"> {
-                    props.jPlaylistsReducer.AudioPlaylist.playlist[
-                      props.jPlaylistsReducer.AudioPlaylist.current
-                    ].title
-                  }</div> 
-                  <div className="jp-artist-name">
-                    {
-                      props.jPlaylistsReducer.AudioPlaylist.playlist[
-                        props.jPlaylistsReducer.AudioPlaylist.current
-                      ].artist
-                    }
-                  </div>
+                  <div className="jp-song-name">{songInfo ? songInfo.title : ""}</div>
+                  <div className="jp-artist-name">{songInfo ? songInfo.artist : ""}</div>
                 </div>
               </div>
             </div>

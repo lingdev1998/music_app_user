@@ -25,16 +25,16 @@ export const TopBoard = (props) => {
               if (index === 0 || index === 1) {
                 return (
                   <div className="col-lg-4 col-md-12 padding_right40">
-                    {weeklyBoard.map((song, index) => {
-                      return <WeeklyBox {...song} topNo={song.topNo} />;
+                    {weeklyBoard.map((song, subIndex) => {
+                      return <WeeklyBox {...song} topNo={song.topNo}  key={"WeeklyBox" + index + "-" + subIndex}/>;
                     })}
                   </div>
                 );
               } else
                 return (
                   <div className="col-lg-4 col-md-12"> 
-                    {weeklyBoard.map((song, index) => {
-                      return <WeeklyBox {...song} />;
+                    {weeklyBoard.map((song, subIndex) => {
+                      return <WeeklyBox {...song} key={"WeeklyBox" + index + "-" + subIndex} />;
                     })}
                   </div>
                 );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Scrollbars } from "react-custom-scrollbars";
+import { actions } from "react-jplaylist";
 
 import PlayRightListItem from "./PlayRightListItem";
 
@@ -45,9 +46,21 @@ const PlayerRight = (props) => {
                 <ul>
                   {props.jPlaylistsReducer.AudioPlaylist.playlist.map((item, index) => {
                     if (props.jPlaylistsReducer.AudioPlaylist.current === index) {
-                      return <PlayRightListItem songIndex={index} item={item} isCurrent={true} />;
+                      return (
+                        <PlayRightListItem
+                          songIndex={index}
+                          item={item}
+                          isCurrent={true}
+                        />
+                      );
                     } else {
-                      return <PlayRightListItem songIndex={index} item={item} isCurrent={false} />;
+                      return (
+                        <PlayRightListItem
+                          songIndex={index}
+                          item={item}
+                          isCurrent={false}
+                        />
+                      );
                     }
                   })}
                 </ul>
@@ -61,6 +74,7 @@ const PlayerRight = (props) => {
             className="ms_clear"
             data-toggle="modal"
             data-target="#clear_modal"
+            onClick={() => props.clearPlaylist('AudioPlaylist')}
           >
             clear
           </a>
@@ -82,4 +96,9 @@ const mapStateToProps = (state) => {
   return { jPlaylistsReducer: state.jPlaylists };
 };
 
-export default connect(mapStateToProps)(PlayerRight);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clearPlaylist: (id) => dispatch(actions.clear(id)),
+  };
+};
+export default connect(mapStateToProps,mapDispatchToProps)(PlayerRight);

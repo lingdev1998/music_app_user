@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import AppReducer from "./AppReducer"; 
+import appReducer from "./appReducer"; 
 
 import { reducer as jPlayers } from "react-jplayer";
 import { reducer as jPlaylists } from "react-jplaylist";
@@ -14,7 +14,7 @@ const reducer = (state = initState, action) => {
 };
 const reducers = combineReducers({
   reducer,
-  AppReducer: AppReducer,
+  AppReducer: appReducer,
   jPlayers :jPlayers,
   jPlaylists:jPlaylists,
 });

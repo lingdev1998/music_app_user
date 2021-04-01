@@ -19,6 +19,7 @@
     "chartjs-plugin-datalabels": "^0.6.0",
     "del": "^5.0.0",
     "gulp-sourcemaps": "^2.6.3",
+    "hoist-non-react-statics": "^3.3.2",
     "i18next": "^19.9.0",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-xhr-backend": "^3.2.2",

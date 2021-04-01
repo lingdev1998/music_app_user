@@ -4,12 +4,12 @@ import Song1 from "../../assets/images/weekly/song1.jpg";
 
 import SGVPlay from "../../assets/images/svg/play.svg";
 
-import MoreIcon from "../../assets/images/svg/more.svg"; 
+import MoreIcon from "../../assets/images/svg/more.svg";
 
 const WeeklyBox = (props) => {
   return (
     <>
-      <div className="ms_weekly_box">
+      <div className="ms_weekly_box" key={props.key}>
         <div className="weekly_left">
           <span className="w_top_no">{props.topNo} </span>
           <div className="w_top_song">
