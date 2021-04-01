@@ -13,5 +13,12 @@
   "artists": "Nghệ sỹ",
   "register":"Đăng ký",
   "login":"Đăng nhập",
-  "Languages":"Ngôn ngữ"
+  "Languages":"Ngôn ngữ",
+  "Login":"Đăng nhập",
+  "SignUpNow":"Đăng Ký Ngay",
+  "LoginUsing":"Đăng nhập bằng",
+  "Forgotpassword":" Quên mật khẩu",
+  "Or":"Hoặc",
+  "Logintoyourcoolaccountbelow":"Đăng nhập vào tài khoản của bạn"
+
 }
