@@ -1,67 +1,76 @@
-import React from 'react';
-import './style.scss'
+import React from "react";
+import Translation from "../../utils/int8-util";
+import "./style.scss";
 
-
-const Login = props =>{
-
-    return(
-<div>
-  &lt;<div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-    <div className="card card0 border-0">
-      <div className="row d-flex">
-        <div className="col-lg-6">
-          <div className="card1 pb-5">
-            <div className="row"> <img src="https://i.imgur.com/CXQmsmF.png" className="logo" /> </div>
-            <div className="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" className="image" /> </div>
+const Login = (props) => {
+  return (
+    <div className="row">
+      <div className="col-md-6 mx-auto py-4 px-0">
+        <div className="form-login-card">
+          <div className="card-title text-center">
+            <h5 className="mt-5">HEY, THERE</h5>
+            <small className="para">
+              <Translation value="Logintoyourcoolaccountbelow.?" />
+            </small>
           </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="card2 card border-0 px-4 py-5">
-            <div className="row mb-4 px-3">
-              <h6 className="mb-0 mr-4 mt-2">Sign in with</h6>
-              <div className="facebook text-center mr-3">
-                <div className="fa fa-facebook" />
+          <form className="signup">
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control login-input "
+                placeholder="Username"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                className="form-control login-input "
+                placeholder="Password"
+              />
+            </div>
+            <button type="button" className="btnLogin input-button">
+              <Translation value="Login" />
+            </button>
+            <div className="row">
+              <div className="col-6 col-sm-6">
+                <a href="#">
+                  <p className="text-left pt-2 ml-1">
+                    <Translation value="Forgotpassword?" />
+                  </p>
+                </a>
               </div>
-              <div className="twitter text-center mr-3">
-                <div className="fa fa-twitter" />
-              </div>
-              <div className="linkedin text-center mr-3">
-                <div className="fa fa-linkedin" />
+              <div className="col-6 col-sm-6">
+                <a href="#">
+                  <p className="text-right pt-2 mr-1">
+                    <Translation value="SignUpNow " />
+                  </p>
+                </a>
               </div>
             </div>
-            <div className="row px-3 mb-4">
-              <div className="line" /> <small className="or text-center">Or</small>
-              <div className="line" />
+            <span className="text-center">
+              <Translation value="Or" />
+            </span>
+            <span className="text-center pt-3">
+              <Translation value="LoginUsing" />
+            </span>
+            <div className="row">
+              <div className="d-flex mx-auto pt-1 pb-3">
+                <a href="#">
+                  <i className="fab fa-facebook i" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-twitter i" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-linkedin i" />
+                </a>
+              </div>
             </div>
-            <div className="row px-3"> <label className="mb-1">
-                <h6 className="mb-0 text-sm">Email Address</h6>
-              </label> <input className="mb-4" type="text" name="email" placeholder="Enter a valid email address" /> </div>
-            <div className="row px-3"> <label className="mb-1">
-                <h6 className="mb-0 text-sm">Password</h6>
-              </label> <input type="password" name="password" placeholder="Enter password" /> </div>
-            <div className="row px-3 mb-4">
-              <div className="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" className="custom-control-input" /> <label htmlFor="chk1" className="custom-control-label text-sm">Remember me</label> </div> <a href="#" className="ml-auto mb-0 text-sm">Forgot Password?</a>
-            </div>
-            <div className="row mb-3 px-3"> <button type="submit" className="btn btn-blue text-center">Login</button> </div>
-            <div className="row mb-4 px-3"> <small className="font-weight-bold">Don't have an account? <a className="text-danger ">Register</a></small> </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-blue py-4">
-        <div className="row px-3"> <small className="ml-4 ml-sm-5 mb-2">Copyright © 2019. All rights reserved.</small>
-          <div className="social-contact ml-4 ml-sm-auto"> <span className="fa fa-facebook mr-4 text-sm" /> <span className="fa fa-google-plus mr-4 text-sm" /> <span className="fa fa-linkedin mr-4 text-sm" /> <span className="fa fa-twitter mr-4 mr-sm-5 text-sm" /> </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-
-
- 
-
-    )
-}
+  );
+};
 
 export default Login;

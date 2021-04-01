@@ -80,7 +80,7 @@ const Header = (props) => {
               <Translation value="register" />
             </span>
           </Link>
-          <Link to="/" className="ms_btn login_btn">
+          <Link to="/login" className="ms_btn login_btn">
             <span>
               <Translation value="login" />
             </span>
