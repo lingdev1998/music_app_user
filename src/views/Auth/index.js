@@ -38,7 +38,7 @@ const AuthPage = (props) => {
 
 const AuthPageModal = (props) => {
   return (
-    <Modal isOpen={props.loginModalShow} centered unmountOnClose={true}>
+    <Modal style={{zIndex:"100000"}} isOpen={props.loginModalShow} centered unmountOnClose={true}>
       <ModalBody>
         <AuthPage setCloseLoginModal={props.setCloseLoginModal} />
       </ModalBody>
