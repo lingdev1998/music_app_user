@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.be71434a.chunk.js": "/music_app_user/static/js/0.be71434a.chunk.js",
     "static/js/0.be71434a.chunk.js.map": "/music_app_user/static/js/0.be71434a.chunk.js.map",
-    "main.css": "/music_app_user/static/css/main.b2c465f6.chunk.css",
-    "main.js": "/music_app_user/static/js/main.4ef5a84f.chunk.js",
-    "main.js.map": "/music_app_user/static/js/main.4ef5a84f.chunk.js.map",
+    "main.css": "/music_app_user/static/css/main.74650b1b.chunk.css",
+    "main.js": "/music_app_user/static/js/main.71d9b63d.chunk.js",
+    "main.js.map": "/music_app_user/static/js/main.71d9b63d.chunk.js.map",
     "runtime-main.js": "/music_app_user/static/js/runtime-main.4698023b.js",
     "runtime-main.js.map": "/music_app_user/static/js/runtime-main.4698023b.js.map",
     "static/css/3.ac8dd76c.chunk.css": "/music_app_user/static/css/3.ac8dd76c.chunk.css",
@@ -18,7 +18,7 @@
     "static/js/6.e688cdff.chunk.js.map": "/music_app_user/static/js/6.e688cdff.chunk.js.map",
     "index.html": "/music_app_user/index.html",
     "static/css/3.ac8dd76c.chunk.css.map": "/music_app_user/static/css/3.ac8dd76c.chunk.css.map",
-    "static/css/main.b2c465f6.chunk.css.map": "/music_app_user/static/css/main.b2c465f6.chunk.css.map",
+    "static/css/main.74650b1b.chunk.css.map": "/music_app_user/static/css/main.74650b1b.chunk.css.map",
     "static/js/3.76b66dc5.chunk.js.LICENSE.txt": "/music_app_user/static/js/3.76b66dc5.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/music_app_user/static/media/sound.8db844f2.svg",
     "static/media/add.25060d4c.svg": "/music_app_user/static/media/add.25060d4c.svg",
@@ -45,7 +45,7 @@
     "static/js/runtime-main.4698023b.js",
     "static/css/3.ac8dd76c.chunk.css",
     "static/js/3.76b66dc5.chunk.js",
-    "static/css/main.b2c465f6.chunk.css",
-    "static/js/main.4ef5a84f.chunk.js"
+    "static/css/main.74650b1b.chunk.css",
+    "static/js/main.71d9b63d.chunk.js"
   ]
 }
