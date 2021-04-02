@@ -1,24 +1,23 @@
- .show {
-     opacity: 1 !important;
-     font-size: 13px !important;
- }
+.dropdown-menu.show {
+   display: block !important;
+   position: absolute;
+   inset: 0px auto auto 0px;
+}
 
- .dropdown-menu.show {
-     display: block !important;
-     position: absolute;
-     inset: 0px auto auto 0px;
- }
- 
 //  #slide bar button
- .slick-prev:before{
-    color: black !important;
- }
- .slick-next:before{
-    color: black !important;
- }
+.slick-prev:before {
+   color: black !important;
+}
+
+.slick-next:before {
+   color: black !important;
+}
 
 //  #player left
-.jp-song-name{  white-space: nowrap;
+.jp-song-name {
+   white-space: nowrap;
    overflow: hidden;
-   text-overflow: ellipsis; 
+   text-overflow: ellipsis;
 }
+
+ 

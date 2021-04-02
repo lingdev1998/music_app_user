@@ -14,7 +14,7 @@ const reducer = (state = initState, action) => {
 };
 const reducers = combineReducers({
   reducer,
-  AppReducer: appReducer,
+  appReducer: appReducer,
   jPlayers :jPlayers,
   jPlaylists:jPlaylists,
 });

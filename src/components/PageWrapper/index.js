@@ -1,10 +1,10 @@
-import React from "react"; 
+import React from "react";
 import ContentWrapper from "./ContentWrapper"; 
 
 const PageWrapper = (props) => {
   return (
-    <> 
-      <ContentWrapper />
+    <>
+      <ContentWrapper /> 
     </>
   );
 };

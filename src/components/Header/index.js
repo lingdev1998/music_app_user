@@ -3,7 +3,10 @@ import { Menu, Dropdown } from "antd";
 import { Link } from "react-router-dom";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
 import Translation from "../../utils/int8-util";
+
+import { setShowLoginModal } from "../../redux/reducers/appReducer";
 
 import SearchIcon from "../../assets/images/svg/search.svg";
 import LanguageIcon from "../../assets/images/svg/lang.svg";
@@ -80,7 +83,7 @@ const Header = (props) => {
               <Translation value="register" />
             </span>
           </Link>
-          <Link to="/login" className="ms_btn login_btn">
+          <Link onClick={() => props.setShowLoginModal()} className="ms_btn login_btn">
             <span>
               <Translation value="login" />
             </span>
@@ -90,4 +93,11 @@ const Header = (props) => {
     </div>
   );
 };
-export default Header;
+
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => ({
+  setShowLoginModal: () => dispatch({type:'SHOW_LOGIN_MODAL'}),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

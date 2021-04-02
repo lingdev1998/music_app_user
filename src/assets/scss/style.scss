@@ -1,4 +1,6 @@
-
+*{
+    font-size: 16px;
+}
 body {
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
@@ -3638,398 +3640,6 @@ span.ms_frequency {
     -o-transform: scale(1) translate(-50%, -50%);
 }
 
-/*====Modal Css Start====*/
-.modal-content {
-    padding: 55px 50px;
-    background-color: transparent;
-    border: none;
-    border-radius: 10px;
-    background-image: -moz-linear-gradient(180deg, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(255, 84, 113) 0%, rgb(222, 52, 81) 100%);
-    background-image: -webkit-linear-gradient(180deg, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(255, 84, 113) 0%, rgb(222, 52, 81) 100%);
-    background-image: -ms-linear-gradient(180deg, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgb(255, 84, 113) 0%, rgb(222, 52, 81) 100%);
-}
-
-.modal {
-    overflow: hidden;
-}
-
-.modal-dialog {
-    max-width: 930px;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
-    -webkit-transform: translate(-50%, -50%) !important;
-    -moz-transform: translate(-50%, -50%) !important;
-    -ms-transform: translate(-50%, -50%) !important;
-    -o-transform: translate(-50%, -50%) !important;
-}
-
-.centered-modal .modal-dialog {
-    margin: auto;
-}
-
-.modal-body {
-    padding: 0;
-}
-
-.ms_register_img {
-    width: 368px;
-    float: left;
-}
-
-.ms_register_form {
-    width: calc(100% - 368px);
-    float: left;
-    padding-left: 50px;
-    text-align: center;
-}
-
-.modal-dialog.login_dialog .modal-content .ms_register_form {
-    padding-top: 25px;
-}
-
-.ms_register_form .form-control {
-    padding: 3px 30px 0px 20px;
-}
-
-.fa_icon {
-    background-image: url(../images/svg/play_icon.svg);
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-
-.modal-dialog button {
-    position: absolute;
-    right: -12px;
-    z-index: 1;
-    top: -15px;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    opacity: 1;
-    border-radius: 100%;
-    cursor: pointer !important;
-}
-
-i.fa_icon.form_close {
-    background-position: -832px 0px;
-}
-
-.close:hover,
-.close:focus {
-    opacity: 1;
-    outline: none;
-}
-
-.ms_register_form h2 {
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-    text-transform: capitalize;
-}
-
-.ms_register_form h2:after,
-.ms_lang_popup .modal-content h1:after {
-    width: 100px;
-    height: 5px;
-    content: "";
-    position: absolute !important;
-    bottom: 0;
-    left: 50%;
-    z-index: 0;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #fff, rgba(255, 42, 112, 0) 60%);
-    background: -moz-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-    background: -ms-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-    background: -o-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-}
-
-.ms_register_form .form-group {
-    position: relative;
-    margin-bottom: 20px;
-    display: inline-block;
-    width: 100%;
-}
-
-.ms_register_form .form-group span.form_icon {
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
-
-i.fa_icon.form-user {
-    background-position: 0px -40px;
-}
-
-i.fa_icon.form-envelope {
-    background-position: -38px -40px;
-}
-
-i.fa_icon.form-lock {
-    background-position: -80px -40px;
-}
-
-.ms_register_form a.ms_btn,
-.ms_lang_btn a.ms_btn {
-    background-color: transparent;
-    height: 40px;
-    border: 1px solid #fff;
-    margin-left: 0px;
-    padding: 0px 31px;
-    line-height: 40px;
-    width: auto;
-    margin-top: 10px;
-}
-
-.ms_register_form a.ms_btn:hover,
-.ms_lang_popup .modal-content.add_lang .ms_lang_btn a.ms_btn:hover {
-    background-color: #ffffff;
-    color: #ff4865;
-}
-
-.ms_register_form p {
-    text-align: center;
-    color: #fff;
-    font-style: italic;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-weight: 300;
-    text-transform: capitalize;
-}
-
-.ms_register_form p a {
-    color: #fff;
-    font-weight: 600;
-    position: relative;
-}
-
-.ms_register_form p a:after,
-.popup_forgot a:after {
-    width: 0px;
-    height: 5px;
-    content: "";
-    position: absolute !important;
-    bottom: -8px;
-    left: 50%;
-    z-index: 0;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #fff, rgba(255, 42, 112, 0) 60%);
-    background: -moz-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-    background: -ms-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-    background: -o-radial-gradient(50% 50%, ellipse closest-side, #ff4865, rgba(255, 42, 112, 0) 60%);
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-}
-
-.ms_register_form p a:hover:after,
-.popup_forgot a:hover:after {
-    width: 140%;
-}
-
-.modal-open .ms_main_wrapper {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-}
-
-.ms_register_form .remember_checkbox {
-    float: left;
-    font-size: 15px;
-    color: #fff;
-    font-weight: 400;
-    position: relative;
-    padding-left: 21px;
-    width: 100%;
-    display: block;
-    text-align: left;
-}
-
-.ms_register_form .remember_checkbox label input {
-    display: none;
-}
-
-.ms_register_form .remember_checkbox label .checkmark {
-    position: absolute;
-    top: 3px;
-    left: 0;
-    height: 12px;
-    width: 12px;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 2px;
-    background-color: #fff;
-}
-
-.ms_register_form .remember_checkbox label input:checked~.checkmark:after {
-    display: block;
-}
-
-.ms_register_form .remember_checkbox label .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 2px;
-    left: 4px;
-    width: 4px;
-    height: 7px;
-    border: solid #767676;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.ms_register_form .remember_checkbox label {
-    cursor: pointer;
-}
-
-.popup_forgot {
-    margin-top: 25px;
-}
-
-.popup_forgot a {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
-    position: relative;
-}
-
-div#myModal1 p {
-    margin-top: 10px;
-}
-
-@media all and (-ms-high-contrast:none) {
-    .modal-open {
-        -ms-overflow-style: auto;
-    }
-
-    *::-ms-backdrop,
-    .modal-open {
-        -ms-overflow-style: auto;
-    }
-}
-
-/*====Clear All Modal====*/
-.ms_clear_modal .modal-dialog,
-.ms_save_modal .modal-dialog {
-    max-width: 500px;
-}
-
-.ms_clear_modal .modal-dialog .modal-body h1,
-.ms_save_modal .modal-dialog .modal-body h1 {
-    font-size: 18px;
-    color: #fff;
-}
-
-.ms_clear_modal .modal-dialog .modal-content,
-.ms_save_modal .modal-dialog .modal-content {
-    padding: 25px;
-    text-align: center;
-}
-
-.clr_modal_btn {
-    margin-top: 15px;
-}
-
-.clr_modal_btn a {
-    height: 30px;
-    background-color: #fff;
-    display: inline-block;
-    padding: 0px 17px;
-    line-height: 34px;
-    text-transform: capitalize;
-    font-size: 13px;
-    border-radius: 15px;
-}
-
-.clr_modal_btn a:hover {
-    color: #ff4865;
-}
-
-/*====Save Modal Css Start====*/
-.save_modal_btn {
-    padding: 20px 0px;
-}
-
-.save_modal_btn a {
-    background-color: #fff;
-    display: inline-block;
-    padding: 0px 15px;
-    border-radius: 20px;
-    height: 35px;
-    line-height: 39px;
-    text-transform: capitalize;
-    font-size: 14px;
-    border: 1px solid #fff;
-}
-
-.save_modal_btn a:hover {
-    color: #fff;
-    background-color: transparent;
-}
-
-.ms_save_email {
-    padding: 0px 40px;
-    border-top: 1px solid #fff;
-    padding-top: 20px;
-}
-
-.ms_save_email h3 {
-    font-size: 15px;
-    color: #fff;
-    text-transform: capitalize;
-    padding-bottom: 15px;
-}
-
-.ms_save_email .save_input_group {
-    margin-bottom: 15px;
-}
-
-.ms_dnt_have {
-    color: #fff;
-}
-
-.ms_dnt_have a {
-    color: #fff;
-}
-
-button.save_btn {
-    position: relative;
-    border-radius: 30px;
-    width: 100px;
-    border: 1px solid #fff;
-    margin-top: 15px;
-    height: 35px;
-    line-height: 33px;
-    background-color: transparent;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-button.save_btn:hover {
-    background-color: #fff;
-    color: #ff4865;
-}
-
 /*====Edit Profile Css Start====*/
 .ms_profile .ms_top_btn {
     float: right;
@@ -4589,147 +4199,147 @@ ul.pro_dropdown_menu li a:hover {
 }
 
 /*====Language Popup Css Start====*/
-.ms_lang_popup .modal-content h1 {
-    color: #fff;
-    font-size: 22px;
-    text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    position: relative;
-}
+// .ms_lang_popup .modal-content h1 {
+//     color: #fff;
+//     font-size: 22px;
+//     text-transform: capitalize;
+//     text-align: center;
+//     margin-bottom: 15px;
+//     padding-bottom: 10px;
+//     position: relative;
+// }
 
-.ms_lang_popup .modal-content p {
-    color: #fff;
-    font-size: 16px !important;
-    text-align: center;
-    margin-bottom: 30px;
-}
+// .ms_lang_popup .modal-content p {
+//     color: #fff;
+//     font-size: 16px !important;
+//     text-align: center;
+//     margin-bottom: 30px;
+// }
 
-.ms_lang_popup .modal-content ul.lang_list {
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
+// .ms_lang_popup .modal-content ul.lang_list {
+//     padding: 0px;
+//     margin: 0px;
+//     list-style: none;
+// }
 
-.ms_lang_popup .modal-content ul.lang_list li {
-    width: 50%;
-    float: left;
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-width: 1px 1px 1px 0px;
-    margin-bottom: -1px;
-    margin-right: -1px;
-}
+// .ms_lang_popup .modal-content ul.lang_list li {
+//     width: 50%;
+//     float: left;
+//     padding: 10px 20px;
+//     border: 1px solid rgba(255, 255, 255, 0.25);
+//     border-width: 1px 1px 1px 0px;
+//     margin-bottom: -1px;
+//     margin-right: -1px;
+// }
 
-.ms_lang_popup .modal-content {
-    padding: 30px 0px;
-}
+// .ms_lang_popup .modal-content {
+//     padding: 30px 0px;
+// }
 
-.lang_list label {
-    cursor: pointer;
-    color: #fff;
-    font-size: 16px;
-    position: relative;
-    font-weight: 500;
-    width: 100%;
-    text-transform: capitalize;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
+// .lang_list label {
+//     cursor: pointer;
+//     color: #fff;
+//     font-size: 16px;
+//     position: relative;
+//     font-weight: 500;
+//     width: 100%;
+//     text-transform: capitalize;
+//     -webkit-transition: all 0.3s ease-in-out;
+//     -moz-transition: all 0.3s ease-in-out;
+//     -ms-transition: all 0.3s ease-in-out;
+//     -o-transition: all 0.3s ease-in-out;
+//     transition: all 0.3s ease-in-out;
+// }
 
-.lang_list label input[type="checkbox"] {
-    display: none;
-}
+// .lang_list label input[type="checkbox"] {
+//     display: none;
+// }
 
-.lang_list label input[type="checkbox"]+.label-text {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 14px;
-    height: 14px;
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50%;
-}
+// .lang_list label input[type="checkbox"]+.label-text {
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+//     position: absolute;
+//     right: 0;
+//     top: 5px;
+//     width: 14px;
+//     height: 14px;
+//     background-color: #fff;
+//     border: 1px solid #fff;
+//     border-radius: 50%;
+// }
 
-.lang_list label input[type="checkbox"]:checked+.label-text:before {
-    content: "\f00c";
-    color: #1b2039;
-    -webkit-animation: tick 150ms ease-in;
-    animation: tick 150ms ease-in;
-    top: -2px;
-    position: absolute;
-    font-size: 12px !important;
-    left: 0px;
-    top: 0px;
-    font: normal normal normal 14px/1 FontAwesome;
-    background-color: #ffffff;
-    border-radius: 50%;
-}
+// .lang_list label input[type="checkbox"]:checked+.label-text:before {
+//     content: "\f00c";
+//     color: #1b2039;
+//     -webkit-animation: tick 150ms ease-in;
+//     animation: tick 150ms ease-in;
+//     top: -2px;
+//     position: absolute;
+//     font-size: 12px !important;
+//     left: 0px;
+//     top: 0px;
+//     font: normal normal normal 14px/1 FontAwesome;
+//     background-color: #ffffff;
+//     border-radius: 50%;
+// }
 
-@-webkit-keyframes tick {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0)
-    }
+// @-webkit-keyframes tick {
+//     0% {
+//         -webkit-transform: scale(0);
+//         transform: scale(0)
+//     }
 
-    90% {
-        -webkit-transform: scale(1.4);
-        transform: scale(1.4)
-    }
+//     90% {
+//         -webkit-transform: scale(1.4);
+//         transform: scale(1.4)
+//     }
 
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
+//     100% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1)
+//     }
+// }
 
-@keyframes tick {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0)
-    }
+// @keyframes tick {
+//     0% {
+//         -webkit-transform: scale(0);
+//         transform: scale(0)
+//     }
 
-    90% {
-        -webkit-transform: scale(1.4);
-        transform: scale(1.4)
-    }
+//     90% {
+//         -webkit-transform: scale(1.4);
+//         transform: scale(1.4)
+//     }
 
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-}
+//     100% {
+//         -webkit-transform: scale(1);
+//         transform: scale(1)
+//     }
+// }
 
-.ms_lang_popup .modal-dialog {
-    max-width: 500px;
-    width: 100%;
-}
+// .ms_lang_popup .modal-dialog {
+//     max-width: 500px;
+//     width: 100%;
+// }
 
-.ms_lang_btn {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
+// .ms_lang_btn {
+//     display: inline-block;
+//     width: 100%;
+//     text-align: center;
+//     margin-top: 20px;
+// }
 
-.ms_lang_btn a.ms_btn {
-    cursor: default;
-    opacity: 0.2;
-}
+// .ms_lang_btn a.ms_btn {
+//     cursor: default;
+//     opacity: 0.2;
+// }
 
-.ms_lang_popup .modal-content.add_lang .ms_lang_btn a.ms_btn {
-    opacity: 1;
-    cursor: pointer;
-}
+// .ms_lang_popup .modal-content.add_lang .ms_lang_btn a.ms_btn {
+//     opacity: 1;
+//     cursor: pointer;
+// }
 
 /*==== Blog Page Css Start ====*/
 .ms_blog_wrapper {

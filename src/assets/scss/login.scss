@@ -12,24 +12,27 @@ a:hover {
     font-size: 25px;
     color: #FF4865;
     font-weight: bold;
-    margin-bottom: -20px;
+    margin-bottom: -15px;
+    margin-top: 15px !important;
+    text-align: center;
 }
 
 .form-login-card {
     // border: 1px solid;
     border-radius: 10px !important;
-    width: 420px !important;
+    width: 100%;
     margin: auto;
     font-size: 16px !important;
     margin: auto;
     background-color: #fff;
+    padding:10px 25px;
 }
 
 .signup {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 10px 50px;
+    padding: 10px 14px;
 }
 
 .login-input {
@@ -48,12 +51,14 @@ a:hover {
 .text-left {
     color: rgba(0, 0, 0, 0.3);
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 .text-right {
     color: #ff0147;
     font-weight: bold;
     font-size: 16px;
+    margin-bottom: 0;
 }
 
 span.text-center {
@@ -74,8 +79,47 @@ span.text-center {
     margin-top: 25px;
 }
 
+//#btn-close  
+.modal-content{
+    border-radius: 15px;
+    .login-title {
+       position: relative !important;
+       text-align: center !important;
+    
+       h4 {
+          right: 50%;
+          margin-top: 15px;
+          margin-bottom: -25px;
+          font-size: 30px;
+          width: 100% !important;
+          text-align: center !important;
+       }
+    
+       .s { 
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #212529;
+          text-align: center !important;
+          box-sizing: border-box;
+          top: 0px;
+          right:15px;
+          position: absolute !important;
+    
+          button {
+             height: 35px;
+             width:35px;
+             font-size: 16px;
+             border:1px solid ;
+             background-color:white;
+             color: rgb(220, 74, 61); 
+          }
+       }
+    }
+ }
+
 .text-center {
-    margin-top: 15px;
+    line-height: 40px;
 }
 
 //social login mCSB_buttonUp  

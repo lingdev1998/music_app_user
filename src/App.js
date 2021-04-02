@@ -1,11 +1,11 @@
 import React from "react";
-import Login from './views/Auth';
+import Login from "./views/Auth";
 import { Provider } from "react-redux";
 import { Router, Route, Switch } from "react-router-dom";
 import { configureStore } from "./redux/store";
 import { createHashHistory as createHistory } from "history";
 import Loader from "./components/Loader/Loader";
-import Layout from "./layouts/index"; 
+import Layout from "./layouts/index";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";
