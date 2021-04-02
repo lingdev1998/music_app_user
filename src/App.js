@@ -1,5 +1,5 @@
 import React from "react";
-import Login from './views/Auth/Login';
+import Login from './views/Auth';
 import { Provider } from "react-redux";
 import { Router, Route, Switch } from "react-router-dom";
 import { configureStore } from "./redux/store";
