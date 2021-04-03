@@ -3,7 +3,6 @@ import LoaderImg from "../../assets/images/loader.gif";
 
 const Loader = ({ isLoading, error }) => {
   // Handle the loading state
-  console.log(isLoading)
   if (isLoading) {
     return (
       <div>

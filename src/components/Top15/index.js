@@ -9,7 +9,6 @@ import OpenLogo from "../../assets/images/weekly/song1.jpg";
 import SGVPlay from "../../assets/images/svg/play.svg";
 
 export const TopBoard = (props) => {
-  console.log(props.data.name);
 
   return (
     <>

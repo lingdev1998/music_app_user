@@ -1,12 +1,12 @@
 import React from "react";
-import Login from "./views/Auth";
 import { Provider } from "react-redux";
 import { Router, Route, Switch } from "react-router-dom";
 import { configureStore } from "./redux/store";
 import { createHashHistory as createHistory } from "history";
-import Loader from "./components/Loader/Loader";
-import Layout from "./layouts/index";
 
+import Loader from "./components/Loader/Loader";
+import Login from "./views/Auth";
+import Layout from "./layouts/index";
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";
 import "./assets/scss/index.scss";
@@ -19,9 +19,8 @@ const history = createHistory();
 
 const store = configureStore();
 
-console.log(store);
-
 function App() {
+  
   return (
     <Provider store={store}>
       <Router history={history}>

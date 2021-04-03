@@ -6,7 +6,6 @@ import TopGenres from "../../components/TopGenres";
 import QuangCao from "../../components/QuangCao";
 
 const Discover = (props) => {
-  console.log("linh");
   return (
     <>
       <Banner />

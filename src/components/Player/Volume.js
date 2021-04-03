@@ -134,8 +134,6 @@ const Volume = (props) => {
         },
         absolute = true;
 
-      console.log(widget);
-
       knob.rotation = 0;
 
       var offR = 0,
@@ -229,7 +227,6 @@ const Volume = (props) => {
         if (sync) widget.trigger("sync");
       };
       widget.showValue = function (v) {
-        console.log("values:", v);
         props.setVolume(v)
         input.val(v);
       };

@@ -87,11 +87,10 @@ const jPlaylistOptions = {
 initializeOptions(jPlayerOptions, jPlaylistOptions);
 
 const PlayList = (props) => {
-  console.log("props:", props.jPlayersReducer);
 
   useEffect(() => {
     var myDomEl = $(".jp-play-bar").append("<div class='bullet'></div>");
-    console.log(myDomEl);
+  
   }, []);
 
   useEffect(() => {}, []);

@@ -14,8 +14,6 @@ for (var i = 0; i < 7; i++) {
 
 const PlayerRight = (props) => {
   const [showQueue, setShowQueue] = useState(false);
-  console.log(playRightListItem);
-
   return (
     <div className="jp_queue_wrapper">
       <span className="que_text" id="myPlaylistQueue" onClick={() => setShowQueue(true)}>

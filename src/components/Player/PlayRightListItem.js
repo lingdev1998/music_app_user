@@ -6,9 +6,7 @@ import MoreSVG from "../../assets/images/svg/more.svg";
 import CloseSVG from "../../assets/images/svg/close.svg";
 
 const PlayRightListItem = (props) => {
-  if (props.isCurrent) {
-    console.log("sda" + props.item.title);
-  }
+  
   return (
     <li className={props.isCurrent ? "jp-playlist-current" : ""} key={"PlayRightListItem" + props.index}>
       <div>
