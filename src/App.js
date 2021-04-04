@@ -16,7 +16,7 @@ import "./assets/scss/index.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const loading = () => <Loader />;
+const loading = () => <Loader isLoading={true}/>;
 
 const history = createBrowserHistory();
 
