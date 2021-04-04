@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import WeeklyArtist from "../../assets/images/weekly/song1.jpg";
+// import WeeklyArtist from "../../assets/images/weekly/song1.jpg";
 
 const PlayerLeft = (props) => {
   const [showOption, setShowOption] = useState(false);

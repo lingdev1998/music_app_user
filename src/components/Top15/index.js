@@ -4,9 +4,9 @@ import WeeklyBox from "./WeeklyBox";
 
 import weeklyBoardData from "../../mock/weeklyBoardData";
 
-import OpenLogo from "../../assets/images/weekly/song1.jpg";
+// import OpenLogo from "../../assets/images/weekly/song1.jpg";
 
-import SGVPlay from "../../assets/images/svg/play.svg";
+// import SGVPlay from "../../assets/images/svg/play.svg";
 
 export const TopBoard = (props) => {
 

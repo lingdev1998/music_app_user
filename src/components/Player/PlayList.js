@@ -1,33 +1,33 @@
 import React, { useEffect } from "react";
 import JPlayer, {
-  Gui,
+  // Gui,
   SeekBar,
-  BufferBar,
-  Poster,
+  // BufferBar,
+  // Poster,
   Audio,
-  Title,
-  FullScreen,
-  Mute,
+  // Title,
+  // FullScreen,
+  // Mute,
   Play,
   PlayBar,
-  VolumeBar,
+  // VolumeBar,
   Duration,
   CurrentTime,
-  Download,
-  BrowserUnsupported,
+  // Download,
+  // BrowserUnsupported,
 } from "react-jplayer";
 
 import JPlaylist, {
-  initializeOptions,
-  Playlist,
+  initializeOptions, 
   Shuffle,
   Next,
   Previous,
   Repeat,
-  TogglePlaylist,
-  Remove,
-  MediaLink,
-  Title as PlaylistTitle,
+  // Playlist,
+  // TogglePlaylist,
+  // Remove,
+  // MediaLink,
+  // Title as PlaylistTitle,
 } from "react-jplaylist";
 
 import $ from "jquery";

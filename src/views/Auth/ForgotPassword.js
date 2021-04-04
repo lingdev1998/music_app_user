@@ -25,7 +25,7 @@ const SignUp = (props) => {
         <div className="col-6 col-sm-6">
           <a onClick={() => props.setAuthPageStep({text:"Login", step:1})}>
             <p className="text-right pt-2 mr-1">
-              <Translation value="LoginNow " />
+              <Translation value="LoginNow" />
             </p>
           </a>
         </div>

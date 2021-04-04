@@ -9,7 +9,6 @@ import { createBrowserHistory } from "history";
 import { configureStore } from "./redux/store";
 import Loader from "./components/Loader/Loader";
 import Layout from "./layouts/index";
-import OAuth2RedirectHandler from "./utils/OAuth2Handler";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";

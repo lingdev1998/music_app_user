@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PlayIcon from "../../assets/images/svg/play.svg";
 import MoreIcon from "../../assets/images/svg/more.svg";
-import MusicRIcon from "../../assets/images/music/r_music1.jpg";
+// import MusicRIcon from "../../assets/images/music/r_music1.jpg";
 
 const SlideContent = (props) => {
   return (

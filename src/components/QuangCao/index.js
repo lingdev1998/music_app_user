@@ -1,6 +1,7 @@
 import React from "react";
 
 import ImgSrc1 from "../../assets/images/adv.jpg";
+
 const QuangCao = (props) => {
   return (
     <div>
@@ -9,7 +10,7 @@ const QuangCao = (props) => {
           <div className="row">
             <div className="col-lg-12">
               <a href="#">
-                <img src={ImgSrc1} alt className="img-fluid" />
+                <img src={ImgSrc1} alt="as" className="img-fluid" />
               </a>
             </div>
           </div>

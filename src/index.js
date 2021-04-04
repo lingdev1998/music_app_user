@@ -4,30 +4,31 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import Backend from "i18next-xhr-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next"; 
+import translationEN from "./utils/locales/en/translation.json";
 
-const fallbackLng = ["en"];
-const availableLanguages = ["en", "vi"];
+import translationVI from "./utils/locales/vi/translation.json";
+
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  vi: {
+    translation: translationVI,
+  },
+};
 
 i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
+  .use(initReactI18next) // passes i18n down to react-i18next
   .init({
-    fallbackLng,
-    detection: {
-      checkWhitelist: true,
-    },
-    debug: false,
-    whitelist: availableLanguages,
+    resources,
+    lng: "en",
+
+    keySeparator: false, // we do not use keys in form messages.welcome
+
     interpolation: {
-      escapeValue: false, // no need for react. it escapes by default
+      escapeValue: false, // react already safes from xss
     },
-    // backend: {
-    //   loadPath: '/hompagelsd/locales/{{lng}}/{{ns}}.json'
-    // }
   });
 
 ReactDOM.render(
