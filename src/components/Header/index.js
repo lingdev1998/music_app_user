@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next";
 import { connect } from "react-redux";
 import Translation from "../../utils/int8-util";
 
-import { setShowLoginModal } from "../../redux/reducers/appReducer";
-
 import SearchIcon from "../../assets/images/svg/search.svg";
 import LanguageIcon from "../../assets/images/svg/lang.svg";
 
@@ -78,26 +76,39 @@ const Header = (props) => {
           </div>
         </Dropdown>
         <div className="ms_top_btn">
-          <Link to="/" className="ms_btn reg_btn">
-            <span>
-              <Translation value="register" />
-            </span>
-          </Link>
-          <Link onClick={() => props.setShowLoginModal()} className="ms_btn login_btn">
-            <span>
-              <Translation value="login" />
-            </span>
-          </Link>
+          {!props.authReducer.isLogin ? (
+            <>
+              <button className="ms_btn reg_btn" style={{ border: "none" }}>
+                <span>
+                  <Translation value="register" />
+                </span>
+              </button>
+              <button
+                className="ms_btn reg_btn"
+                style={{ border: "none" }}
+                onClick={() => props.setShowLoginModal()}
+                className="ms_btn login_btn"
+              >
+                <span>
+                  <Translation value="login" />
+                </span>
+              </button>
+            </>
+          ) : (
+            props.authReducer.email
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  authReducer: state.authReducer,
+});
 
 const mapDispatchToProps = (dispatch) => ({
-  setShowLoginModal: () => dispatch({type:'SHOW_LOGIN_MODAL'}),
+  setShowLoginModal: () => dispatch({ type: "SHOW_LOGIN_MODAL" }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
-import appReducer from "./appReducer"; 
+
+import appReducer from "./appReducer";
+import authReducer from "./authReducer";
 
 import { reducer as jPlayers } from "react-jplayer";
 import { reducer as jPlaylists } from "react-jplaylist";
@@ -15,7 +17,8 @@ const reducer = (state = initState, action) => {
 const reducers = combineReducers({
   reducer,
   appReducer: appReducer,
-  jPlayers :jPlayers,
-  jPlaylists:jPlaylists,
+  authReducer: authReducer,
+  jPlayers: jPlayers,
+  jPlaylists: jPlaylists,
 });
 export default reducers;

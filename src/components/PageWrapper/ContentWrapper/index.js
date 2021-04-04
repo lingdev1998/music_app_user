@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Switch, Route, withRouter } from 'react-router';
 import { CacheSwitch } from "react-router-cache-route";
 import LoginPage from "../../../views/Auth";
 import routes from "../../../routes";
@@ -9,13 +9,13 @@ const PageWrapper = (props) => {
     <>
       <LoginPage />
       <CacheSwitch>
-        <Redirect exact from="/" to="/discover" />
+        {/* <Redirect from="/" to="/discover" /> */}
         {routes.map((route, index) => {
           return (
             <Route
               key={"routeMain" + index}
               path={route.path}
-              component={route.component}
+              component={route.component} exact
             />
           );
         })}
@@ -23,4 +23,4 @@ const PageWrapper = (props) => {
     </>
   );
 };
-export default PageWrapper;
+export default withRouter(PageWrapper);

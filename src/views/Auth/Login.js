@@ -1,5 +1,13 @@
-import React from "react"; 
-import Translation from "../../utils/int8-util"; 
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
+import Translation from "../../utils/int8-util";
+import {
+  GOOGLE_AUTH_URL,
+  FACEBOOK_AUTH_URL,
+  GITHUB_AUTH_URL,
+  ACCESS_TOKEN,
+} from "../../constants";
+
 const Login = (props) => {
   return (
     <form className="signup">
@@ -22,7 +30,6 @@ const Login = (props) => {
       </button>
       <div className="row" style={{ marginTop: "15px" }}>
         <div className="col-6 col-sm-6">
-          {/* click nut nay, gọi hàm setTrangThai của thằng cha, chuyển trạng thái sang 2 */}
           <a onClick={() => props.setAuthPageStep({ text: "ForgotPassword", step: 2 })}>
             <p className="text-left pt-2 ml-1">
               <Translation value="Forgotpassword?" />
@@ -41,13 +48,13 @@ const Login = (props) => {
         <Translation value="Or" />
       </span>
       <div className="row" style={{ marginRight: "0px", marginLeft: "0px" }}>
-        <a href="#" className="social-button" id="facebook-connect">
+        <a href={FACEBOOK_AUTH_URL} className="social-button" id="facebook-connect">
           <span>Connect with Facebook</span>
         </a>
-        <a href="#" className="social-button" id="google-connect">
+        <a href={GOOGLE_AUTH_URL} className="social-button" id="google-connect">
           <span>Connect with Google</span>
         </a>
-        <a href="#" className="social-button" id="twitter-connect">
+        <a href={GITHUB_AUTH_URL} className="social-button" id="twitter-connect">
           <span>Connect with Twitter</span>
         </a>
       </div>

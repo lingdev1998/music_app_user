@@ -5,28 +5,28 @@ import { AsyncDiscoverComponent ,AsyncAlbumComponent} from "./views/AsyncCompone
 
 const routes = [
   {
-    path: "/discover",
+    path: "/app/discover",
     name: "Discover",
     component: AsyncDiscoverComponent,
     icon: HomeOutlinedIcon,
   },
-  { path: "/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/app/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/app/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/app/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
   {
-    path: "/top-tracks",
+    path: "/app/top-tracks",
     name: "Top Tracks",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
   },
   {
-    path: "/free-music",
+    path: "/app/free-music",
     name: "Free Music",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
   },
-  { path: "/stations", name: "Stations", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/tracks", name: "tracks", component: AsyncAlbumComponent, icon: AudiotrackOutlinedIcon },
+  { path: "/app/stations", name: "Stations", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/app/tracks", name: "tracks", component: AsyncAlbumComponent, icon: AudiotrackOutlinedIcon },
 ];
 
 export default routes;
