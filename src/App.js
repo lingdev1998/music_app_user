@@ -2,14 +2,14 @@ import React from "react";
 import { Provider } from "react-redux";
 import { Switch, Route, Redirect } from "react-router";
 // import { HashRouter } from "react-router-dom";
-import { BrowserRouter as Router } from 'react-router-dom';
-import { createBrowserHistory  } from "history";
+import { BrowserRouter as Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
 // import { createHashHistory as createHistory } from "history";
 
 import { configureStore } from "./redux/store";
-import OAuth2RedirectHandler from "./utils/OAuth2Handler";
-import Loader from "./components/Loader/Loader"; 
+import Loader from "./components/Loader/Loader";
 import Layout from "./layouts/index";
+import OAuth2RedirectHandler from "./utils/OAuth2Handler";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "antd/dist/antd.css";
@@ -23,7 +23,7 @@ const history = createBrowserHistory();
 
 const store = configureStore();
 
-function App(props) {
+const App = (props) => {
   return (
     <Provider store={store}>
       <Router history={history}>
@@ -32,7 +32,11 @@ function App(props) {
             <Route path="/" exact render={() => <Redirect to="/app/discover" />} />
             <Route path="/app" exact render={() => <Redirect to="/app/discover" />} />
             <Route path="/app" dispatch={props.dispatch} component={Layout} />
-            <Route path="/app/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
+            {/* <Route
+              path="/app/oauth2/redirect"
+              key={"/app/oauth2/redirect" + 1}
+              component={OAuth2RedirectHandler}
+            ></Route> */}
             {/* <Route path="/documentation" exact
                            render={() => <Redirect to="/documentation/getting-started/overview"/>}/>
                     <Route path="/documentation" component={DocumentationLayoutComponent}/>
@@ -44,6 +48,5 @@ function App(props) {
       </Router>
     </Provider>
   );
-}
-
+};
 export default App;

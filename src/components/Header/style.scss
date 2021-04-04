@@ -1,0 +1,104 @@
+.user-profile-right {
+    .user-profile-dropdown {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        button {
+            min-width: 3.75rem;
+            color: rgba(0, 0, 0, .5);
+            font-size: .8125rem;
+            font-weight: 400;
+            padding: .625rem;
+            white-space: nowrap !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            display: block;
+            border: none;
+
+            img {
+                max-width: 30px;
+                margin-right: .5em !important;
+                border-radius: 50% !important;
+                vertical-align: middle;
+            }
+
+            @media (min-width: 768px) {
+                span { 
+                    display: inline-block !important;
+                }
+            }
+
+            span {
+                white-space: nowrap !important;
+                font-size: 15px;
+
+
+                display: inline-block !important;
+            }
+
+            ::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: .255em;
+                vertical-align: .255em;
+                content: "";
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                border-left: .3em solid transparent;
+            }
+        }
+    }
+}
+
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.main-navbar .navbar .nav-link {
+    min-width: 3.75rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, .5);
+}
+
+.main-navbar .navbar .user-avatar {
+    max-width: 2.5rem;
+}
+
+.mr-2,
+.mx-2 {
+    margin-right: .5rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+.dropdown-toggle:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}

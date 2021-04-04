@@ -866,6 +866,9 @@ span.nav_text {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
+    span{
+        vertical-align: middle;
+    }
 }
 
 .ms_top_right .ms_top_lang:hover {
@@ -906,7 +909,7 @@ span.nav_text {
 }
 
 .ms_top_right .ms_top_lang img {
-    margin-left: 15px;
+    margin-left: 5px;
     margin-right: 6px;
 }
 
@@ -5607,7 +5610,7 @@ h2.widget-title:after {
     }
 
     .ms_top_right .ms_top_lang {
-        top: 8px;
+        // top: 8px;
     }
 
     .ms_profile .ms_top_btn .ms_btn {
@@ -5615,7 +5618,7 @@ h2.widget-title:after {
     }
 
     .ms_main_wrapper.ms_profile .ms_top_lang {
-        top: 18px;
+        // top: 18px;
     }
 
     .ms_admin_name span.ms_pro_name {
@@ -6021,7 +6024,7 @@ h2.widget-title:after {
     .ms_top_right .ms_top_lang {
         float: left;
         position: relative;
-        top: 8px;
+        // top: 8px;
     }
 
     .ms_top_btn .ms_btn {

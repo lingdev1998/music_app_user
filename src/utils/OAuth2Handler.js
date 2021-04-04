@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { loginSuccess, loginFailure } from "../redux/reducers/authReducer";
 
 const ACCESS_TOKEN = "accessToken";
 
@@ -17,6 +20,7 @@ const OAuth2RedirectHandler = (props) => {
 
   if (token) {
     localStorage.setItem(ACCESS_TOKEN, token);
+    props.loginSuccess(token);
     return (
       <Redirect
         to={{
@@ -26,6 +30,7 @@ const OAuth2RedirectHandler = (props) => {
       />
     );
   } else {
+    props.loginFailure(token);
     return (
       <Redirect
         to={{
@@ -40,4 +45,14 @@ const OAuth2RedirectHandler = (props) => {
   }
 };
 
-export default OAuth2RedirectHandler;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginSuccess: (token) => dispatch(loginSuccess(token)),
+    loginFailure: () => dispatch(loginFailure()),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(OAuth2RedirectHandler);

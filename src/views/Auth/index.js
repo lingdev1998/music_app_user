@@ -1,17 +1,15 @@
-import React, { useState } from "react"; 
-import { 
-  Modal, 
-  ModalBody, 
-} from "reactstrap";
+import React, { useState } from "react";
+import { Modal, ModalBody } from "reactstrap";
 import { connect } from "react-redux";
 
 import { setCloseLoginModal } from "../../redux/reducers/appReducer";
 import Translation from "../../utils/int8-util";
 import Login from "./Login";
 import ForgotPassword from "./ForgotPassword";
+import VerifyAccount from "./VerifyAccount";
 
 const AuthPage = (props) => {
-  const [authPageStep, setAuthPageStep] = useState({ step: 1, text: "Login" });
+  const [authPageStep, setAuthPageStep] = useState({ step: 3, text: "Verify Account" });
 
   return (
     <div className="form-login-card">
@@ -29,6 +27,8 @@ const AuthPage = (props) => {
         <Login setAuthPageStep={setAuthPageStep} />
       ) : authPageStep.step === 2 ? (
         <ForgotPassword setAuthPageStep={setAuthPageStep} />
+      ) : authPageStep.step === 3 ? (
+        <VerifyAccount setAuthPageStep={setAuthPageStep} />
       ) : (
         ""
       )}
@@ -38,7 +38,12 @@ const AuthPage = (props) => {
 
 const AuthPageModal = (props) => {
   return (
-    <Modal style={{zIndex:"100000"}} isOpen={props.loginModalShow} centered unmountOnClose={true}>
+    <Modal
+      style={{ zIndex: "100000" }}
+      isOpen={props.loginModalShow}
+      centered
+      unmountOnClose={true}
+    >
       <ModalBody>
         <AuthPage setCloseLoginModal={props.setCloseLoginModal} />
       </ModalBody>

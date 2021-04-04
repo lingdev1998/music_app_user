@@ -3,6 +3,8 @@ export const ACTION_TYPES = {
   CHANGED_NAVBAR_ROUTE: "CHANGED_NAVBAR_ROUTE",
   SHOW_LOGIN_MODAL: "SHOW_LOGIN_MODAL",
   CLOSE_LOGIN_MODAL: "CLOSE_LOGIN_MODAL",
+  SHOW_LOADING: "SHOW_LOADING",
+  STOP_SHOW_LOADING: "STOP_SHOW_LOADING",
 };
 
 export const setShowLoginModal = () => {
@@ -12,6 +14,10 @@ export const setShowLoginModal = () => {
 };
 
 export const setCloseLoginModal = () => ({ type: ACTION_TYPES.CLOSE_LOGIN_MODAL });
+
+export const showLoading = () => ({ type: ACTION_TYPES.SHOW_LOADING });
+
+export const stopShowLoading = () => ({ type: ACTION_TYPES.STOP_SHOW_LOADING });
 
 const initState = {
   loading: false,
@@ -39,6 +45,16 @@ const reducer = (state = initState, action) => {
       return {
         ...state,
         loginModalShow: false,
+      };
+    case ACTION_TYPES.SHOW_LOADING:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case ACTION_TYPES.STOP_SHOW_LOADING:
+      return {
+        ...state,
+        isLoading: false,
       };
     default:
       return { ...state };

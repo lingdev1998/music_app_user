@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
+
 import Translation from "../../utils/int8-util";
 import {
   GOOGLE_AUTH_URL,
