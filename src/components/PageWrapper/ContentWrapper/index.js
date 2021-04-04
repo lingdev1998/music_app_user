@@ -11,11 +11,6 @@ const PageWrapper = (props) => {
       <LoginPage />
       <CacheSwitch>
         {/* <Redirect from="/" to="/discover" /> */}
-        <Route
-          path="/app/oauth2/redirect"
-          key={"/app/oauth2/redirect" + 1}
-          component={OAuth2RedirectHandler}
-        ></Route>
         {routes.map((route, index) => {
           return (
             <Route
@@ -26,6 +21,11 @@ const PageWrapper = (props) => {
             />
           );
         })}
+        <Route
+          path="/app/oauth2/redirect"
+          key={"/app/oauth2/redirect" + 1}
+          component={OAuth2RedirectHandler}
+        ></Route>
       </CacheSwitch>
     </>
   );

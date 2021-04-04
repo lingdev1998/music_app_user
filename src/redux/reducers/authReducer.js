@@ -2,9 +2,7 @@ import axios from "../../utils/fetchUtil";
 import { REQUEST, SUCCESS, FAILURE } from "../../utils/actionTypeUtil";
 import { ACCESS_TOKEN, API_BASE_URL, EMAIL_IDENTITY } from "../../constants";
 
-const token = localStorage.getItem(ACCESS_TOKEN);
-
-console.log(token);
+const token = localStorage.getItem(ACCESS_TOKEN); 
 
 export const ACTION_TYPES = {
   LOGIN: "LOGIN",
