@@ -57,8 +57,8 @@ const App = (props) => {
         <React.Suspense fallback={loading()}>
           <Switch>
             <Route path="/" exact render={() => <Redirect to="/music_app_user/discover" />} />
-            <Route path="/music_app_user" exact render={() => <Redirect to="/music_app_user/discover" />} />
-            <Route path="/music_app_user" dispatch={props.dispatch} component={Layout} />
+            <Route path="/music_app_user" exact render={() => <Redirect to="/music_app_user/discover" />} /> 
+            <Route path="/music_app_user" dispatch={props.dispatch} render={(props) => <Layout {...props} />} /> 
             {/* <Route exact path="/register" name="Register Page" render={(props) => <Register {...props} />} />
           <Route exact path="/404" name="Page 404" render={(props) => <Page404 {...props} />} />
           <Route exact path="/500" name="Page 500" render={(props) => <Page500 {...props} />} /> */}
