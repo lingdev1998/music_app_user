@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, withRouter } from "react-router";
+import { Switch, Redirect, Route, withRouter } from "react-router";
 import { CacheSwitch } from "react-router-cache-route";
 import LoginPage from "../../../views/Auth";
 import routes from "../../../routes";
@@ -9,8 +9,8 @@ const PageWrapper = (props) => {
   return (
     <>
       <LoginPage />
-      <CacheSwitch>
-        {/* <Redirect from="/" to="/discover" /> */}
+      <Switch>
+        {/* <Redirect from="/" to="/music_app_user/discover" /> */}
         {routes.map((route, index) => {
           return (
             <Route
@@ -26,7 +26,7 @@ const PageWrapper = (props) => {
           key={"/music_app_user/oauth2/redirect" + 1}
           component={OAuth2RedirectHandler}
         ></Route>
-      </CacheSwitch>
+      </Switch>
     </>
   );
 };

@@ -45,4 +45,5 @@ const mapDispatchToProps = (dispatch) => {
     showLoading: () => dispatch({ type: appActionTypes.SHOW_LOADING }),
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(LayoutHome);
