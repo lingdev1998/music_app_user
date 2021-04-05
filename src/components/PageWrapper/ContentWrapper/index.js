@@ -22,8 +22,8 @@ const PageWrapper = (props) => {
           );
         })}
         <Route
-          path="/app/oauth2/redirect"
-          key={"/app/oauth2/redirect" + 1}
+          path="/music_app_user/oauth2/redirect"
+          key={"/music_app_user/oauth2/redirect" + 1}
           component={OAuth2RedirectHandler}
         ></Route>
       </CacheSwitch>
