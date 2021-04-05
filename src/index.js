@@ -4,7 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { I18nextProvider } from "react-i18next";
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next"; 
+import { initReactI18next } from "react-i18next";
 import translationEN from "./utils/locales/en/translation.json";
 
 import translationVI from "./utils/locales/vi/translation.json";
