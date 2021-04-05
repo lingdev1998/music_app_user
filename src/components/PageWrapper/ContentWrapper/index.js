@@ -25,8 +25,7 @@ const PageWrapper = (props) => {
           path="/app/oauth2/redirect"
           key={"/app/oauth2/redirect" + 1}
           component={OAuth2RedirectHandler}
-        > 
-        </Route>
+        ></Route>
       </CacheSwitch>
     </>
   );

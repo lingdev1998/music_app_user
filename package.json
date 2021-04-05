@@ -1,6 +1,5 @@
 {
-  "homepage": "http://IamLing98.github.io/music_app_user",
-  "name": "music_app_user",
+  "homepage": "http://IamLing98.github.io", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
