@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const loading = () => <Loader isLoading={true} />;
 
-// const history = createBrowserHistory();
+const history = createBrowserHistory();
 
 const store = configureStore();
 
@@ -53,7 +53,7 @@ const store = configureStore();
 const App = (props) => {
   return (
     <Provider store={store}>
-      <Router>
+      <Router  history={history}>
         <React.Suspense fallback={loading()}>
           <Switch>
             <Route path="/" exact render={() => <Redirect to="/music_app_user/discover" />} />

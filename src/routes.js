@@ -5,22 +5,22 @@ import { AsyncDiscoverComponent ,AsyncAlbumComponent} from "./views/AsyncCompone
 
 const routes = [
   {
-    path: "/discover",
+    path: "/music_app_user/discover",
     name: "Discover",
     component: AsyncDiscoverComponent,
     icon: HomeOutlinedIcon,
   },
-  { path: "/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/music_app_user/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/music_app_user/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/music_app_user/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
   {
-    path: "/top-tracks",
+    path: "/music_app_user/top-tracks",
     name: "Top Tracks",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
   },
   {
-    path: "/free-music",
+    path: "/music_app_user/free-music",
     name: "Free Music",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
