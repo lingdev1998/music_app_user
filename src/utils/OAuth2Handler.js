@@ -19,12 +19,13 @@ const OAuth2RedirectHandler = (props) => {
   const error = getUrlParameter("error");
 
   if (token) {
+    console.log(token);
     localStorage.setItem(ACCESS_TOKEN, token);
     props.loginSuccess(token);
     return (
       <Redirect
         to={{
-          pathname: "/app/albums",
+          pathname: "/music_app_user/albums",
           state: { from: props.location },
         }}
       />
@@ -34,7 +35,7 @@ const OAuth2RedirectHandler = (props) => {
     return (
       <Redirect
         to={{
-          pathname: "/app/discover",
+          pathname: "/music_app_user/discover",
           state: {
             from: props.location,
             error: error,

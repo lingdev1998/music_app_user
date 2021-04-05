@@ -17,7 +17,7 @@ const PageWrapper = (props) => {
               key={"routeMain" + index}
               path={route.path}
               component={route.component}
-              exact
+              // exact
             />
           );
         })}
