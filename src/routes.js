@@ -5,28 +5,28 @@ import { AsyncDiscoverComponent ,AsyncAlbumComponent} from "./views/AsyncCompone
 
 const routes = [
   {
-    path: "/music_app_user/discover",
+    path: "/discover",
     name: "Discover",
     component: AsyncDiscoverComponent,
     icon: HomeOutlinedIcon,
   },
-  { path: "/music_app_user/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/music_app_user/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/music_app_user/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/albums", name: "Albums", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/artists", name: "Artists", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/genres", name: "Genres", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
   {
-    path: "/music_app_user/top-tracks",
+    path: "/top-tracks",
     name: "Top Tracks",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
   },
   {
-    path: "/music_app_user/free-music",
+    path: "/free-music",
     name: "Free Music",
     component: AsyncAlbumComponent,
     icon: HomeOutlinedIcon,
   },
-  { path: "/music_app_user/stations", name: "Stations", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
-  { path: "/music_app_user/tracks", name: "tracks", component: AsyncAlbumComponent, icon: AudiotrackOutlinedIcon },
+  { path: "/stations", name: "Stations", component: AsyncAlbumComponent, icon: HomeOutlinedIcon },
+  { path: "/tracks", name: "tracks", component: AsyncAlbumComponent, icon: AudiotrackOutlinedIcon },
 ];
 
 export default routes;
