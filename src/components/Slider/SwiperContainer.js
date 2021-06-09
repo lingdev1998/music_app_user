@@ -78,6 +78,13 @@ const settings = {
 
 const listTrack = [];
 
+for (var i = 0; i < 7; i++) {
+  listTrack.push({
+    trackName: "TracksName",
+    authors: ["Đoàn Văn Linh"],
+  });
+}
+
 const SwiperContainer = (props) => {
   // const SampleNextArrow = (props) => {
   //   const { className,  onClick } = props;
@@ -88,13 +95,7 @@ const SwiperContainer = (props) => {
   //   const { className,   onClick } = props;
   //   return <div className={className} onClick={onClick} />;
   // }
-
-  for (var i = 0; i < 7; i++) {
-    listTrack.push({
-      trackName: "TracksName",
-      authors: ["Đoàn Văn Linh"],
-    });
-  }
+ 
 
   return (
     <div className="swiper-container">

@@ -4,7 +4,6 @@ import { Switch, Route, Redirect } from "react-router";
 import { HashRouter } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-// import { HashRouter } from "react-router-dom";
 // import { createHashHistory as createHistory } from "history";
 
 import { configureStore } from "./redux/store";
@@ -12,10 +11,10 @@ import Loader from "./components/Loader/Loader";
 import Layout from "./layouts/index";
 
 import "bootstrap/dist/css/bootstrap.css";
-import "antd/dist/antd.css";
-import "./assets/scss/index.scss";
+import "antd/dist/antd.css"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./assets/scss/index.scss";
 
 const loading = () => <Loader isLoading={true} />;
 
@@ -53,7 +52,7 @@ const store = configureStore();
 const App = (props) => {
   return (
     <Provider store={store}>
-      <Router  history={history}>
+      <Router history={history}>
         <React.Suspense fallback={loading()}>
           <Switch>
             <Route
